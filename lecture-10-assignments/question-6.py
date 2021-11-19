@@ -5,11 +5,8 @@ columns and use the appropriate format options when writing the numbers.
 Write the square root with 3 digits after the decimal point.
 """
 import math
-import os
 def main():
-    # get current working directory
-    dirpath = os.path.dirname(__file__)
-    out_file = open(os.path.join(dirpath,"squares-and-roots.txt"),'w')
+    out_file = open("squares-and-roots.txt",'w')
 
     for num in range(1,101):
         square = num ** 2
