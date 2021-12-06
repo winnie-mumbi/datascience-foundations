@@ -3,7 +3,7 @@ Modify searchage() such that it gets the search age from the user.
 """
 def search_age():
     try:
-        infile = open("namess.txt","r")
+        infile = open("names.txt","r")
 
         age = int(input("Enter an age number: "))
         found = False

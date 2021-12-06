@@ -30,12 +30,12 @@ def search_name_1():
 def search_name_2():
     infile = open("names.txt","r")
 
-    letters = input("Enter first few letters of a name: ")
+    # get user input and convert to title case
+    letters = input("Enter first few letters of a name: ").title()
 
     found = False
 
     count = len(letters)
-    letters = letters[0].upper() + letters[1:].lower()
 
     for s in infile:
         line = s.strip()

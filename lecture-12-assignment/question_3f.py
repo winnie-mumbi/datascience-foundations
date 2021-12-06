@@ -6,7 +6,7 @@ enters. If the user enters a number other than 1 or 2, print a warning message a
 program
 """
 def search_name():
-    # prompt user for a name and convert only the first letter to upper
+    # prompt user for a name and convert only the first letter to upper case others letters to lowercase
     name = input("Enter a name: ").title()
 
     if not name.isalpha():
@@ -20,7 +20,6 @@ def search_name():
     found = False
 
     count = len(name)
-    letters = name[0].upper() + name[1:].lower()
 
     for s in infile:
         # remove leading and trailing spaces and newlines
@@ -29,7 +28,7 @@ def search_name():
         # get the first column
         first_name = line.split(' ')[0]
 
-        if first_name[:count] == letters:
+        if first_name[:count] == name:
             print(line)
             found = True
     
@@ -69,7 +68,7 @@ def main():
     print("Choose a search option - either 1 or 2")
     print("1: Search with name")
     print("2: Search with age")
-    # prompts use for an option
+    # prompts user for an option
     try:
         option = int(input("Enter option 1 or 2: "))
 
@@ -80,7 +79,7 @@ def main():
             search_name()
         else:
             search_age()
-    except ValueError as e:
+    except ValueError:
         print("Invalid entry.Enter a valid number")
 
 

@@ -22,7 +22,7 @@ def search_age(comparator):
             found = True
     
     if not found:
-        print(f"No person of age {age} found")
+        print(f"No person found")
 
 def main():
     print("Choose a search option")
